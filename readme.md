@@ -11,7 +11,7 @@ Overview
 
 The package <b> com.leetcode </b> contains solutions of some medium- and hard-level problems published on https://leetcode.com website. All solutions are grouped by categories.
 
-Total 79 problems have been solved
+Total 84 problems have been solved
 
 The link to my page is https://leetcode.com/akalu/
 
