@@ -1,10 +1,13 @@
 package com.leetcode.utils;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Set;
 import java.util.stream.Stream;
 
+import com.leetcode.model.ListNode;
 import com.leetcode.model.TreeNode;
 
 /**
@@ -76,5 +79,30 @@ public class Utils {
 		print(Arrays.stream(newVector));
 
 	}
+	
+	public static void print(ListNode lst) {
+		if (lst == null) {
+			System.out.println("Empty list");
+			return;
+		}
+		Set<ListNode> processed = new HashSet<>();
+		boolean first = true;
+		StringBuilder sb = new StringBuilder();
+		while (lst != null) {
+			if (processed.contains(lst)) {
+				System.out.println("Cycle detected!");
+				//return;
+			}
+			if (!first) {
+				sb.append("->");
+			}
+			first = false;
+			sb.append(lst.val);
+			processed.add(lst);
+			lst = lst.next;
+		}
+		System.out.println(sb.toString());
+	}
+
 
 }

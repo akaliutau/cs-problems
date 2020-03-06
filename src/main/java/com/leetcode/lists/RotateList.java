@@ -1,5 +1,7 @@
 package com.leetcode.lists;
 
+import com.leetcode.model.ListNode;
+
 /**
  * https://leetcode.com/problems/rotate-list/
  * 
@@ -18,15 +20,6 @@ package com.leetcode.lists;
  * 
  */
 public class RotateList {
-
-	static class ListNode {
-		int val;
-		ListNode next;
-
-		ListNode(int x) {
-			val = x;
-		}
-	}
 
 	public static ListNode rotateRight(ListNode head, int k) {
 		ListNode oldHead = head;

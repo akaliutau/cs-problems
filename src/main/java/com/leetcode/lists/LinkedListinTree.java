@@ -40,15 +40,6 @@ import com.leetcode.utils.Utils;
  */
 public class LinkedListinTree {
 
-	public static class ListNode {
-		int val;
-		ListNode next;
-
-		public ListNode(int x) {
-			val = x;
-		}
-	}
-
 	public static boolean check(ListNode node, TreeNode treeNode) {
 		if (treeNode == null) {
 			return false;

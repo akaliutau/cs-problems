@@ -3,6 +3,8 @@ package com.leetcode.lists;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.leetcode.model.ListNode;
+
 /**
  * https://leetcode.com/problems/add-two-numbers/
  * 
@@ -18,20 +20,6 @@ import java.util.List;
  * for Add Two Numbers
  */
 public class AddTwoNumbers {
-
-	public static class ListNode {
-		int val;
-		ListNode next;
-
-		ListNode(int x) {
-			val = x;
-		}
-
-		@Override
-		public String toString() {
-			return "" + val;
-		}
-	}
 
 	public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		ListNode res = new ListNode(0);

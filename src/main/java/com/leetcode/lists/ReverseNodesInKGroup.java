@@ -1,5 +1,7 @@
 package com.leetcode.lists;
 
+import com.leetcode.model.ListNode;
+
 /**
  * https://leetcode.com/problems/reverse-nodes-in-k-group/
  * 
@@ -26,15 +28,6 @@ package com.leetcode.lists;
  * list's nodes, only nodes itself may be changed.
  */
 public class ReverseNodesInKGroup {
-
-	public static class ListNode {
-		int val;
-		ListNode next;
-
-		ListNode(int x) {
-			val = x;
-		}
-	}
 
 	public static ListNode getNth(ListNode from, int n) {
 		while (from != null && n-- > 0) {

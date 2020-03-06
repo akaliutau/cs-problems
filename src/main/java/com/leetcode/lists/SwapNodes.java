@@ -1,5 +1,7 @@
 package com.leetcode.lists;
 
+import com.leetcode.model.ListNode;
+
 /**
  * https://leetcode.com/problems/swap-nodes-in-pairs/
  * 
@@ -12,15 +14,6 @@ package com.leetcode.lists;
  */
 public class SwapNodes {
 
-	public static class ListNode {
-		int val;
-		ListNode next;
-
-		ListNode(int x) {
-			val = x;
-		}
-	}
-	
 	public static ListNode swapPairs(ListNode head) {
    		ListNode cur = head;
         if (cur == null){

@@ -1,5 +1,7 @@
 package com.leetcode.lists;
 
+import com.leetcode.model.ListNode;
+
 /**
  * https://leetcode.com/problems/merge-k-sorted-lists/
  * 
@@ -12,21 +14,6 @@ package com.leetcode.lists;
  * Keys and Rooms.
  */
 public class MergekSortedLists {
-
-	public static class ListNode {
-		int val;
-		ListNode next;
-
-		ListNode(int x) {
-			val = x;
-		}
-
-		@Override
-		public String toString() {
-			return "" + val + "next:" + (next != null ? next.val : "non");
-		}
-
-	}
 
 	public static ListNode mergeKLists(ListNode[] lists) {
 		ListNode curMinNode = new ListNode(Integer.MAX_VALUE);

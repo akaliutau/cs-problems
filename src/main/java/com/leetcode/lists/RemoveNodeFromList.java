@@ -1,5 +1,7 @@
 package com.leetcode.lists;
 
+import com.leetcode.model.ListNode;
+
 /**
  * https://leetcode.com/problems/remove-nth-node-from-end-of-list/
  * 
@@ -12,15 +14,6 @@ package com.leetcode.lists;
  * 1->2->3->5.
  */
 public class RemoveNodeFromList {
-
-	public static class ListNode {
-		int val;
-		ListNode next;
-
-		ListNode(int x) {
-			val = x;
-		}
-	}
 
 	public static ListNode removeNthFromEnd(ListNode head, int n) {
 		int counter = 0;

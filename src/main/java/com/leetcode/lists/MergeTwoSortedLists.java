@@ -3,6 +3,8 @@ package com.leetcode.lists;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.leetcode.model.ListNode;
+
 /**
  * https://leetcode.com/problems/merge-two-sorted-lists/
  * 
@@ -15,15 +17,6 @@ Memory Usage: 38.7 MB, less than 19.53% of Java online submissions for Merge Two
  */
 public class MergeTwoSortedLists {
 
-	public static class ListNode {
-		int val;
-		ListNode next;
-
-		ListNode(int x) {
-			val = x;
-		}
-	}
-	
 	public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 		List<ListNode> lst = new ArrayList<>();
 		ListNode l = l1;
