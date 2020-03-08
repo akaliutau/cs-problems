@@ -65,6 +65,17 @@ public class Utils {
 		}
 	}
 
+	public static void print(char[][] vector) {
+		for (int i = 0; i < vector.length; i++) {
+			StringBuffer sb = new StringBuffer();
+			for (int j = 0; j < vector[i].length; j++) {
+				sb.append(vector[i][j]);
+			}
+			System.out.println(sb.toString());
+		}
+		System.out.println();
+	}
+
 
 	public static void print(String[] vector) {
 		print(Arrays.stream(vector));
