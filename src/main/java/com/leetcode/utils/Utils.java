@@ -34,6 +34,7 @@ public class Utils {
 		}
 		TreeNode root = new TreeNode(tree[0]);
 		int idx = 0;
+		int counter = 1;
 		Queue<TreeNode> toProcess = new LinkedList<>();
 		toProcess.add(root);
 		while (++idx < tree.length) {
@@ -41,6 +42,7 @@ public class Utils {
 			if (tree[idx] != null) {
 				cur.left = new TreeNode(tree[idx]);
 				toProcess.add(cur.left);
+				counter++;
 			}else {
 				cur.left = null;
 			}
@@ -48,10 +50,12 @@ public class Utils {
 			if (tree[idx] != null) {
 				cur.right = new TreeNode(tree[idx]);
 				toProcess.add(cur.right);
+				counter++;
 			}else {
 				cur.right = null;
 			}
 		}
+		System.out.println("Total "+counter+" node(s) have been added");
 		return root;
 	}
 
