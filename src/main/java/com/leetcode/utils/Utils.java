@@ -63,6 +63,11 @@ public class Utils {
 		print(Arrays.stream(vector).boxed());
 	}
 	
+	public static void print(long[] vector) {
+		print(Arrays.stream(vector).boxed());
+	}
+
+	
 	public static void print(int[][] vector) {
 		for (int i = 0; i < vector.length; i++) {
 			print(Arrays.stream(vector[i]).boxed());
