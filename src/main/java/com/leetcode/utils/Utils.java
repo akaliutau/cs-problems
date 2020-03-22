@@ -39,7 +39,7 @@ public class Utils {
 		toProcess.add(root);
 		while (++idx < tree.length) {
 			TreeNode cur = toProcess.poll();
-			if (tree[idx] != null) {
+			if (idx < tree.length && tree[idx] != null) {
 				cur.left = new TreeNode(tree[idx]);
 				toProcess.add(cur.left);
 				counter++;
@@ -47,7 +47,7 @@ public class Utils {
 				cur.left = null;
 			}
 			idx++;
-			if (tree[idx] != null) {
+			if (idx < tree.length && tree[idx] != null) {
 				cur.right = new TreeNode(tree[idx]);
 				toProcess.add(cur.right);
 				counter++;
