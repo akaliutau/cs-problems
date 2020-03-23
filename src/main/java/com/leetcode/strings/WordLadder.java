@@ -58,7 +58,7 @@ public class WordLadder {
 				
 				// this block used to generate a new set of words which are:
 				// 1) differ by 1 letter
-				// 20 in dictionary
+				// 2) in dictionary
 				for (int pos = 0; pos < startWord.length(); pos++) {
 					char cur = word[pos];
 
