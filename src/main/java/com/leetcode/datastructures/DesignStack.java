@@ -1,4 +1,4 @@
-package com.leetcode.data;
+package com.leetcode.datastructures;
 
 /**
  * https://leetcode.com/problems/design-a-stack-with-increment-operation/
