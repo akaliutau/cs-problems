@@ -31,10 +31,7 @@ public class RemoveDuplicatesII {
 
 		ListNode next = null;
 		ListNode curElem = head;
-		ListNode lastValidElem = new ListNode(Integer.MIN_VALUE);
-
-		boolean dup = false;
-
+		
 		while (head != null) {
 			next = head.next;
 			if (next != null && curElem.val != next.val) {
