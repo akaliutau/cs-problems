@@ -1,7 +1,5 @@
 package com.leetcode.arrays;
 
-import java.util.Arrays;
-
 /**
  * https://leetcode.com/problems/missing-number/
  * 
