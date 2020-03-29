@@ -1,6 +1,7 @@
 package com.leetcode.combinatorics;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -68,8 +69,8 @@ public class CombinatioSumI {
 	public static List<List<Integer>> combinationSum(int[] candidates, int target) {
 		Set<List<Integer>> results = new HashSet<>();
 		Stack<Integer> result = new Stack<>();
+		Arrays.sort(candidates);
 		combination(candidates, 0, target, result, results);
-		System.out.println(results);
 		
 		List<List<Integer>> finalRes =  new ArrayList<>();
 		for (List<Integer> vector : results) {

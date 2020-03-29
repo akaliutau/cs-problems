@@ -28,6 +28,20 @@ public class Utils {
 		System.out.println(sb.toString());
 	}
 	
+	public static ListNode loadList(int[] lst) {
+		if (lst.length == 0) {
+			return null;
+		}
+		ListNode node = new ListNode(lst[0]);
+		ListNode curNode = node;
+		for (int i = 1; i < lst.length; i++) {
+			curNode.next = new ListNode(lst[i]);
+			curNode = curNode.next;
+		}
+		return node;
+	}
+
+	
 	public static TreeNode loadTree(Integer[] tree) {
 		if (tree.length == 0) {
 			return null;
