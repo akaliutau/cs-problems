@@ -1,4 +1,4 @@
-package com.leetcode.strings;
+package com.leetcode.palindrome;
 
 /**
  * https://leetcode.com/problems/palindrom-i/ 
