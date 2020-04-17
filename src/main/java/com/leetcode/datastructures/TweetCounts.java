@@ -1,4 +1,4 @@
-package com.leetcode.misc;
+package com.leetcode.datastructures;
 
 import java.util.ArrayList;
 import java.util.Collections;
