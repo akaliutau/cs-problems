@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * https://leetcode.com/problems/intersection-of-two-arrays
+ * https://leetcode.com/problems/intersection-of-two-arrays-ii/
  *
  * Given two arrays, write a function to compute their intersection.
  * 
