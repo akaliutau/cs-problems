@@ -29,7 +29,7 @@ public class Utils {
 	}
 	
 	public static ListNode loadList(int[] lst) {
-		if (lst.length == 0) {
+		if (lst == null || lst.length == 0) {
 			return null;
 		}
 		ListNode node = new ListNode(lst[0]);
@@ -43,7 +43,7 @@ public class Utils {
 
 	
 	public static TreeNode loadTree(Integer[] tree) {
-		if (tree.length == 0) {
+		if (tree == null || tree.length == 0) {
 			return null;
 		}
 		TreeNode root = new TreeNode(tree[0]);
@@ -74,11 +74,19 @@ public class Utils {
 	}
 
 	public static void print(int[] vector) {
-		print(Arrays.stream(vector).boxed());
+		if (vector != null) {
+			print(Arrays.stream(vector).boxed());
+		}else {
+			System.out.println("vector is null");
+		}
 	}
 	
 	public static void print(long[] vector) {
-		print(Arrays.stream(vector).boxed());
+		if (vector != null) {
+			print(Arrays.stream(vector).boxed());
+		}else {
+			System.out.println("vector is null");
+		}
 	}
 
 	
@@ -101,7 +109,11 @@ public class Utils {
 
 
 	public static void print(String[] vector) {
-		print(Arrays.stream(vector));
+		if (vector != null) {
+			print(Arrays.stream(vector));
+		}else {
+			System.out.println("vector is null");
+		}
 	}
 
 	public static void print(char[] vector, int from) {

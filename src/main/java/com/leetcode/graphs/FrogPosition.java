@@ -11,7 +11,7 @@ import java.util.Map;
  * Given an undirected tree consisting of n vertices numbered from 1 to n. A
  * frog starts jumping from the vertex 1. In one second, the frog jumps from its
  * current vertex to another unvisited vertex if they are directly connected.
- * The frog can not jump back to a visited vertex. In case the frog can jump to
+ * The frog can not jump back to a completed vertex. In case the frog can jump to
  * several vertices it jumps randomly to one of them with the same probability,
  * otherwise, when the frog can not jump to any unvisited vertex it jumps
  * forever on the same vertex.
@@ -56,7 +56,7 @@ public class FrogPosition {
 
 		@Override
 		public String toString() {
-			return String.format("[id=%d,p=%f,ties=%d,visited=%s, time =%d]", id, p, ties.size(), visited, time);
+			return String.format("[id=%d,p=%f,ties=%d,completed=%s, time =%d]", id, p, ties.size(), visited, time);
 		}
 	}
 
