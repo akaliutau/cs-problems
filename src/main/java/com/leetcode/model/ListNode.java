@@ -10,7 +10,7 @@ public class ListNode {
 
 	@Override
 	public String toString() {
-		return "" + val + "next:" + (next != null ? next.val : "non");
+		return "val=" + val + ", next:" + (next != null ? next.val : "non");
 	}
 
 }

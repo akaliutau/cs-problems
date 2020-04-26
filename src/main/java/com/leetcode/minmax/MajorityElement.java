@@ -1,4 +1,4 @@
-package com.leetcode.arrays;
+package com.leetcode.minmax;
 
 import java.util.HashMap;
 import java.util.Map;
