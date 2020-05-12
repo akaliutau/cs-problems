@@ -21,21 +21,23 @@ import java.util.List;
  */
 public class TrappingRainWaterII {
 	
-	public static class Extr {
-		public boolean type;// true - max, false - min
+	public static class Peak {
+		public int pos;// play the role of unique id
+
 		public int h;
-		public int pos;
+		public Peak left;
+		public Peak right;
 		
-		public Extr(int h, int pos, boolean type) {
+		public Peak(int h, int pos) {
 			this.h = h;
-			this.type = type;
 			this.pos = pos;
 		}
-		
+
 		@Override
 		public String toString() {
-			return "[h="+h+",pos="+pos+"]";
+			return "Peak [h=" + h + ", pos=" + pos + ", left=" + left.pos + ", right=" + right.pos + "]";
 		}
+		
 	}
 
 	public static int trap(int[] height) {
@@ -45,77 +47,6 @@ public class TrappingRainWaterII {
 			return 0;
 		}
 
-		boolean up = false;
-		int absMax = 0;
-		List<Extr> maxs = new ArrayList<>();
-		
-		maxs.add(new Extr(height[0],0,true));
-
-		for (int i = 1; i < height.length; i++) {
-			int h = height[i];
-			int diff = h - height[i - 1];
-
-
-			if ((diff < 0) && up) {// max
-				up = false;
-				maxs.add(new Extr(height[i - 1],i,true));
-				lastMaxHeight = height[i - 1];
-				absMax = absMax < lastMaxHeight ? lastMaxHeight : absMax;
-			}
-			if ((diff > 0) && !up) {// min
-				up = true;
-				lastMaxHeight = lastMaxHeight < height[i - 1] ? height[i - 1] : lastMaxHeight;
-			}
-
-		}
-		maxs.add(new Extr(height[height.length-1],height.length-1,true));
-		// check first and last elem
-		if (Math.min(height[0], height[height.length-1]) >= absMax) {
-			maxs = new ArrayList<>();
-			maxs.add(new Extr(height[0],0,true));
-			maxs.add(new Extr(height[height.length-1],height.length-1,true));
-		}
-		
-		Comparator<Extr> sortByHeight = (o, p) -> Integer.compare(p.h, o.h);// asc
-
-		maxs.sort(sortByHeight);
-		System.out.println(maxs);
-
-		// render height map
-
-		Extr lastMax = maxs.get(0);
-		int leftPos = lastMax.pos;
-		int rightPos = lastMax.pos;
-		for (int i = 1; i < maxs.size(); i++) {
-			Extr extr = maxs.get(i);
-			if (leftPos <= extr.pos  && extr.pos <= rightPos) {
-				continue;
-			}
-			int level = Math.min(lastMax.h, extr.h);
-			int l = 0;
-			int r = 0;
-			if (lastMax.pos > extr.pos) {
-				r = lastMax.pos;
-				l = extr.pos;
-			}else {
-				l = lastMax.pos;
-				r = extr.pos;
-			}
-
-			for (int j = l; j < r; j++) {
-				if (leftPos <= j  && j < rightPos) {
-					continue;
-				}
-				int diff = level-height[j];
-				vol += (diff > 0 ? diff : 0);
-			}
-			leftPos = leftPos > l ? l : leftPos;
-			rightPos = rightPos < r ? r : rightPos;
-
-			if (leftPos == 0 && rightPos == height.length-1) {
-				break;
-			}
-		}		
 		
 		return vol;
 
@@ -129,17 +60,17 @@ public class TrappingRainWaterII {
 		int[] arr1 = { 3, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
 		System.out.println(trap(arr1));//14
 		
-		int[] arr2 = { 3, 1, 0, 0, 1, 0, 1 };
+		int[] arr2 = { 3, 1, 0, 0, 1, 0, 1 };//3
 		System.out.println(trap(arr2));
 
 		int[] arr3 = { 3, 1, 0, 2, 1, 0 };
-		System.out.println(trap(arr3));
+		System.out.println(trap(arr3));//3
 
 		int[] arr4 = { 1,1,1};
-		System.out.println(trap(arr4));
+		System.out.println(trap(arr4));//0
 
 		int[] arr5 = { 1,0,1};
-		System.out.println(trap(arr5));
+		System.out.println(trap(arr5));//1
 
 		int[] arr6 = { 6, 5, 0, 4, 0, 1 };
 		System.out.println(trap(arr6));//5
