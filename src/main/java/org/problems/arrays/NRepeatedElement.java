@@ -1,4 +1,4 @@
-package org.problems.active;
+package org.problems.arrays;
 
 import java.util.List;
 
@@ -30,16 +30,29 @@ import java.util.List;
  * A.length is even
  * 
  */
-public class sol207 {
+public class NRepeatedElement {
 
-	public int repeatedNTimes(int[] A) {
-		return 0;
+	public static int repeatedNTimes(int[] a) {
+		int[] counters = new int[10001];
+		for (int i = 0; i < a.length; i++) {
+			counters[a[i]] ++;
+			if (counters[a[i]] > 1) {
+				return a[i];
+			}
+		}
+		return -1;
         
     }
 
 	public static void main(String[] arg) {
+		int[] a = {1,2,3,3};
+		System.out.println(repeatedNTimes(a));
 
-		System.out.println(true);
+		int[] a1 = {2,1,2,5,3,2};
+		System.out.println(repeatedNTimes(a1));
+
+		int[] a2 = {5,1,5,2,5,3,5,4};
+		System.out.println(repeatedNTimes(a2));
 
 	}
 

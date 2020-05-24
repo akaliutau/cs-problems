@@ -1,4 +1,4 @@
-package org.problems.active;
+package org.problems.numbers;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -43,7 +43,7 @@ import java.util.Set;
  * Runtime: 1 ms, faster than 95.87% of Java online submissions for Powerful Integers.
  * Memory Usage: 36.9 MB, less than 12.50% of Java online submissions for Powerful Integers
  */
-public class sol201 {
+public class PowerfulIntegers {
 
 	public static List<Integer> powerfulIntegers(int x, int y, int bound) {
 		

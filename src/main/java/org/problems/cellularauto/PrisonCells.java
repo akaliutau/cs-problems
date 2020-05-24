@@ -1,4 +1,4 @@
-package org.problems.active;
+package org.problems.cellularauto;
 
 import java.util.List;
 
@@ -58,7 +58,7 @@ import org.problems.utils.Utils;
  * Memory Usage: 39.2 MB, less than 7.14% of Java online submissions for Prison Cells After N Days
  * 
  */
-public class sol205 {
+public class PrisonCells {
 
 	public static int[] prisonAfterNDays(int[] cells, int day) {
         int n = cells.length;

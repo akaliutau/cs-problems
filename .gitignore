@@ -1,5 +1,5 @@
 /target/
-src/main/java/com/leetcode/active
+src/main/java/org/problems/active/
 !.mvn/wrapper/maven-wrapper.jar
 *.db
 
