@@ -9,9 +9,10 @@ This is a collection of java solutions for various problems found on different o
 Overview
 ===========
 
-The package <b> com.leetcode </b> contains solutions of some easy-, medium- and hard-level problems published on https://leetcode.com web-site. All solutions are grouped by categories.
+The package <b> org.problems </b> contains solutions of some easy-, medium- and hard-level problems published on https://leetcode.com web-site. All solutions are grouped by categories.
+Some problems are taken from other sites, such as hackerrank.com, etc
 
-Total 330+ problems have been solved
+Total 400+ problems have been solved
 
 The link to my page is https://leetcode.com/akalu/
 
