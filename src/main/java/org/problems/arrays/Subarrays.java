@@ -1,4 +1,4 @@
-package org.problems.misc;
+package org.problems.arrays;
 
 /**
  * Find the number of sub-arrays of fixed length with avg >= threshold

@@ -1,4 +1,4 @@
-package org.problems.misc;
+package org.problems.arrays;
 
 import static org.problems.utils.Utils.print;
 
