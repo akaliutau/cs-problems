@@ -39,7 +39,6 @@ public class BullsandCows {
 	
 	public static String getHint(String secret, String guess) {
 			int[] provided = new int[10];
-			int[] cows = new int[10];
 	        String temp = "%dA%dB";
 	        int nCows = 0;
 	        int nBulls = 0;

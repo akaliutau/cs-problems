@@ -81,7 +81,6 @@ public class CountAndSay {
 
 	public static void main(String[] arg) {
 
-		int[] arr = {};
 		System.out.println(countAndSay(1));
 		System.out.println(countAndSay(2));
 		System.out.println(countAndSay(3));

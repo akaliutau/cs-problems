@@ -1,7 +1,5 @@
 package org.problems.games;
 
-import java.util.List;
-
 /**
  * https://leetcode.com/problems/nim-game/
  * 

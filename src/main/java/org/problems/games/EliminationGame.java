@@ -1,7 +1,5 @@
 package org.problems.games;
 
-import java.util.Arrays;
-
 /**
  * https://leetcode.com/problems/elimination-game/
  * 
