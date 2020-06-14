@@ -91,6 +91,9 @@ public class Utils {
 
 	
 	public static void print(int[][] vector) {
+		if (vector == null || vector.length == 0) {
+			System.out.println("Empty array");
+		}
 		for (int i = 0; i < vector.length; i++) {
 			print(Arrays.stream(vector[i]).boxed());
 		}

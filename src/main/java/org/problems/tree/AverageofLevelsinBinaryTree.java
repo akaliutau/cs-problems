@@ -1,4 +1,4 @@
-package org.problems.lists;
+package org.problems.tree;
 
 import java.util.ArrayList;
 import java.util.HashMap;
