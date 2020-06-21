@@ -1,50 +1,59 @@
 package org.problems.dp;
 
 /**
- * https://leetcode.com/problems/min-cost-climbing-stairs/
+ * https://leetcode.com/problems/climbing-stairs/
  * 
- * On a staircase, the i-th step has some non-negative cost = cost[i] assigned
- * (0 indexed).
+ * You are climbing a stair case. It takes n steps to reach to the top.
  * 
- * Once you pay the cost, you can either climb one or two steps. You need to
- * find minimum cost to reach the top of the floor, and you can either start
- * from the step with index 0, or the step with index 1.
+ * Each time you can either climb 1 or 2 steps. In how many distinct ways can
+ * you climb to the top?
  * 
- * Example 1: Input: cost = [10, 15, 20] Output: 15 Explanation: Cheapest is
- * start on cost[1], pay that cost and go to the top.
+ * Note: Given n will be a positive integer.
  * 
- * Example 2: Input: cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1] Output: 6
- * Explanation: Cheapest is start on cost[0], and only step on 1s, skipping
- * cost[3].
+ * Example 1:
  * 
- * Note: cost will have a length in the range [2, 1000]. Every cost[i] will be
- * an integer in the range [0, 999].
+ * Input: 2 Output: 2 
+ * Explanation: There are two ways to climb to the top. 1. 1
+ * step + 1 step 2. 2 steps Example 2:
  * 
+ * Input: 3 Output: 3 
+ * Explanation: There are three ways to climb to the top. 1.
+ * 1 step + 1 step + 1 step 2. 1 step + 2 steps 3. 2 steps + 1 step
  * 
- */
+ * step(4) = step(3) + step(2)
+ * 4
+ * 3 - k
+ * 2 - m
+ * 1 
+ * 4 = 1+1+1+1
+ *   = 1+1+2
+ * 	   1+2+1
+ *     2+1+1
+ *     2+2	
+ */	
 public class ClimbingStairs {
 
-	public static int minCostClimbingStairs(int[] cost) {
-		int curPlus1 = 0;
-		int curPlus2 = 0;
-		int n = cost.length;
-		for (int i = n - 1; i >= 0; --i) {
-			int cur = cost[i] + Math.min(curPlus1, curPlus2);
-			curPlus2 = curPlus1;
-			curPlus1 = cur;
+	public static int climbStairs(int n) {
+		if (n == 0 || n == 1) {
+			return 1;
 		}
-		return Math.min(curPlus1, curPlus2);
-
-	}
+		if (n==2) {
+			return 2;
+		}
+		int[] dp = new int[n];
+		dp[0] = 1;
+		dp[1] = 2;
+		for (int i = 2; i < n; i++) {
+			dp[i] = dp[i-2] + dp[i-1]; 
+		}
+		return dp[n-1];
+    }
 
 	public static void main(String[] arg) {
 
-		int[] cost = {10, 15, 20};
-		System.out.println(minCostClimbingStairs(cost));
-
-		int[] cost1 = {1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
-		System.out.println(minCostClimbingStairs(cost1));
+		System.out.println(climbStairs(3));
+		System.out.println(climbStairs(4));
+		System.out.println(climbStairs(6));
 
 	}
-
 }
