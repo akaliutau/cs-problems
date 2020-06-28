@@ -1,4 +1,4 @@
-package org.problems.arrays;
+package org.problems.sets;
 
 import java.util.ArrayList;
 import java.util.Arrays;
