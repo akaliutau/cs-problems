@@ -2,7 +2,6 @@ package org.problems.regex;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 import org.problems.utils.Utils;
 

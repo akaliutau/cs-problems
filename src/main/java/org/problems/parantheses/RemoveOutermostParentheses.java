@@ -1,8 +1,5 @@
 package org.problems.parantheses;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * https://leetcode.com/problems/remove-outermost-parentheses/
  * 

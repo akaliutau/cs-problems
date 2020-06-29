@@ -1,6 +1,7 @@
 package org.problems.lists;
 
-import org.problems.model.*;
+import org.problems.model.ListNode;
+import org.problems.model.TreeNode;
 import org.problems.utils.Utils;
 
 /**

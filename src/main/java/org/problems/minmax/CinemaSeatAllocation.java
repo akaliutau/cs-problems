@@ -2,7 +2,6 @@ package org.problems.minmax;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Stack;
 
 /**
  * https://leetcode.com/problems/cinema-seat-allocation/

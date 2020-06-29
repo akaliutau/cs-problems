@@ -1,7 +1,6 @@
 package org.problems.arrays;
 
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * https://leetcode.com/problems/next-greater-element-iv/

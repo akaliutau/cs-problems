@@ -1,7 +1,5 @@
 package org.problems.datastructures;
 
-import java.util.List;
-
 /**
  * https://leetcode.com/problems/subrectangle-queries/
  * 

@@ -1,7 +1,5 @@
 package org.problems.arrays;
 
-import java.util.List;
-
 /**
  * https://leetcode.com/problems/n-repeated-element-in-size-2n-array/
  * 

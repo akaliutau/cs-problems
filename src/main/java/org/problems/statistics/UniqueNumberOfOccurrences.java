@@ -1,7 +1,5 @@
 package org.problems.statistics;
 
-import java.util.List;
-
 /**
  * https://leetcode.com/problems/unique-number-of-occurrences/
  * 

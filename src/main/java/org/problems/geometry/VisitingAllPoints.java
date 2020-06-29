@@ -1,7 +1,5 @@
 package org.problems.geometry;
 
-import java.util.List;
-
 /**
  * https://leetcode.com/problems/minimum-time-visiting-all-points/
  * 

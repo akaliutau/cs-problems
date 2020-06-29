@@ -1,7 +1,5 @@
 package org.problems.numbers;
 
-import java.util.List;
-
 /**
  * https://leetcode.com/problems/n-th-tribonacci-number/
  * 

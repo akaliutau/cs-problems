@@ -1,7 +1,5 @@
 package org.problems.combinatorics;
 
-import java.util.List;
-
 import org.problems.utils.Utils;
 
 /**

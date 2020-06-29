@@ -1,9 +1,5 @@
 package org.problems.topology;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-
 /**
  * https://leetcode.com/problems/trapping-rain-water/
  * 
