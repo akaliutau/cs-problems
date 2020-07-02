@@ -1,7 +1,5 @@
 package org.problems.strings;
 
-import java.util.List;
-
 /**
  * https://leetcode.com/problems/to-lower-case/ 
  * 

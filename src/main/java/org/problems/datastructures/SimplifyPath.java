@@ -2,8 +2,6 @@ package org.problems.datastructures;
 
 import java.util.Stack;
 
-import org.problems.utils.Utils;
-
 /**
  * https://leetcode.com/problems/simplify-path/
  * 

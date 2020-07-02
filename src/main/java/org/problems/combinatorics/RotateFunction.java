@@ -1,7 +1,5 @@
 package org.problems.combinatorics;
 
-import org.problems.utils.Utils;
-
 /**
  * https://leetcode.com/problems/rotate-function/
  * 

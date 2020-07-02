@@ -1,7 +1,5 @@
 package org.problems.tree;
 
-import java.util.List;
-
 import org.problems.model.TreeNode;
 import org.problems.utils.Utils;
 

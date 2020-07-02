@@ -2,8 +2,6 @@ package org.problems.minmax;
 
 import java.util.Arrays;
 
-import org.problems.model.TreeNode;
-
 /**
  * https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/
  * 

@@ -1,9 +1,5 @@
 package org.problems.strings;
 
-import java.util.List;
-
-import org.problems.utils.Utils;
-
 /**
  * https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/
  * 

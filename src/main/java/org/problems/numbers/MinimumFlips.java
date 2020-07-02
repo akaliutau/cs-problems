@@ -1,7 +1,6 @@
 package org.problems.numbers;
 
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/

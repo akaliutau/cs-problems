@@ -1,7 +1,5 @@
 package org.problems.arrays;
 
-import org.problems.model.TreeNode;
-
 /**
  * https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays/
  * 
