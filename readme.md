@@ -12,7 +12,7 @@ Overview
 The package <b> org.problems </b> contains solutions of some easy-, medium- and hard-level problems published on https://leetcode.com web-site. All solutions are grouped by categories.
 Some problems are taken from other sites, such as hackerrank.com, etc
 
-Total 400+ problems have been solved
+Total 500+ problems have been solved
 
 The link to my page is https://leetcode.com/akalu/
 
