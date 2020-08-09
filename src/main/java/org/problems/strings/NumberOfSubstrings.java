@@ -43,7 +43,6 @@ public class NumberOfSubstrings {
 
 	public static void main(String[] arg) {
 
-		int res = 0;
 		System.out.println(numberOfSubstrings("abcabc"));
 		System.out.println(numberOfSubstrings("aaacb"));
 		System.out.println(numberOfSubstrings("abc"));
