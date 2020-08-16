@@ -1,4 +1,4 @@
-package org.problems.misc;
+package org.problems.math;
 
 /**
  * https://leetcode.com/problems/powx-n
