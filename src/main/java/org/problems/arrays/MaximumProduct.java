@@ -11,7 +11,8 @@ package org.problems.arrays;
  * Input: nums = [1,-2,-3,4] Output: 24 
  * Explanation: The array nums already has a positive product of 24.
  * 
- * 
+ * Runtime: 1 ms, faster than 95.49% of Java online submissions for Maximum Product Subarray.
+ * Memory Usage: 39.9 MB, less than 43.44% of Java online submissions for Maximum Product Subarray
  */
 public class MaximumProduct {
 

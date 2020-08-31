@@ -65,6 +65,16 @@ public class CriticalConnections {
 		}
 	}
 	
+	/**
+	 * Find edges with only one route
+	 * @param graph
+	 * @param visited
+	 * @param rank
+	 * @param prevNode
+	 * @param curNode
+	 * @param curRunk
+	 * @param results
+	 */
     private static void dfs(Map<Integer, Server> graph, boolean[] visited, int[] rank, int prevNode, int curNode, int curRunk, List<List<Integer>> results){
         rank[curNode] = curRunk;
         visited[curNode] = true;
@@ -75,7 +85,9 @@ public class CriticalConnections {
             if (!visited[neighbor]) {
                 dfs(graph, visited, rank, curNode, neighbor, curRunk + 1, results);
             }
+            // compare with neighbor - will be downgraded if and only if there is one route
             rank[curNode] = Math.min(rank[curNode], rank[neighbor]);
+            // add critical if any
             if (rank[neighbor] == curRunk + 1){
             	results.add(Arrays.asList(curNode, neighbor));
             }
