@@ -13,7 +13,7 @@ import java.util.Queue;
  * https://leetcode.com/problems/cut-off-trees-for-golf-event/
  * 
  * You are asked to cut off trees in a forest for a golf event. The forest is
- * represented as a non-negative 2D map, in this map:
+ * represented as a non-negative 2D nodes, in this nodes:
  * 
  * 0 represents the obstacle can't be reached. 1 represents the ground can be
  * walked through. The place with number bigger than 1 represents a tree can be

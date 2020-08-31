@@ -53,7 +53,7 @@ public class SnapshotArrayImpl {
 
 			@Override
 			public String toString() {
-				return "Patch [map=" + map + "]";
+				return "Patch [nodes=" + map + "]";
 			}
 		}
 

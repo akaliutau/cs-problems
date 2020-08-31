@@ -85,7 +85,7 @@ public class AvoidFlood {
 		int n = rains.length;
 		int[] ans = new int[n];
 		Map<Integer, Integer> full = new HashMap<>();
-		// map lake = reserved stat
+		// nodes lake = reserved stat
 		Res rsv = new Res();
 		for (int i = 0; i < n; i++) {
 			if (rains[i] > 0) {
