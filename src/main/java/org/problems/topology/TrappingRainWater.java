@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * https://leetcode.com/problems/trapping-rain-water/
  * 
- * Given n non-negative integers representing an elevation map where the width
+ * Given n non-negative integers representing an elevation nodes where the width
  * of each bar is 1, compute how much water it is able to trap after raining. 
  * 
  * 
@@ -81,7 +81,7 @@ public class TrappingRainWater {
 		maxs.sort(sortByHeight);
 		System.out.println(maxs);
 
-		// render height map
+		// render height nodes
 
 		Extr lastMax = maxs.get(0);
 		int leftPos = lastMax.pos;

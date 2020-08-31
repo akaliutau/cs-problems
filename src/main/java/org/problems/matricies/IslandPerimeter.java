@@ -3,7 +3,7 @@ package org.problems.matricies;
 /**
  * https://leetcode.com/problems/island-perimeter/
  *
- * You are given a map in form of a two-dimensional integer grid where 1
+ * You are given a nodes in form of a two-dimensional integer grid where 1
  * represents land and 0 represents water.
  * 
  * Grid cells are connected horizontally/vertically (not diagonally). The grid

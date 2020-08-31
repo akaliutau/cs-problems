@@ -3,7 +3,7 @@ package org.problems.strings;
 /**
  * https://leetcode.com/problems/decrypt-string-from-alphabet-to-integer-mapping/
  * 
- * Given a string s formed by digits ('0' - '9') and '#' . We want to map s to
+ * Given a string s formed by digits ('0' - '9') and '#' . We want to nodes s to
  * English lowercase characters as follows:
  * 
  * Characters ('a' to 'i') are represented by ('1' to '9') respectively.

@@ -5,7 +5,7 @@ package org.problems.games;
  * 
  * You are playing a simplified Pacman game. You start at the point (0, 0), and
  * your destination is (target[0], target[1]). There are several ghosts on the
- * map, the i-th ghost starts at (ghosts[i][0], ghosts[i][1]).
+ * nodes, the i-th ghost starts at (ghosts[i][0], ghosts[i][1]).
  * 
  * Each turn, you and all ghosts simultaneously *may* move in one of 4 cardinal
  * directions: north, east, west, or south, going from the previous point to a
