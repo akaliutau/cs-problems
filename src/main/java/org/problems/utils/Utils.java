@@ -87,6 +87,7 @@ public class Utils {
 		}else {
 			System.out.println("vector is null");
 		}
+		System.out.println();
 	}
 
 	
@@ -97,6 +98,7 @@ public class Utils {
 		for (int i = 0; i < vector.length; i++) {
 			print(Arrays.stream(vector[i]).boxed());
 		}
+		System.out.println();
 	}
 
 	public static void print(char[][] vector) {
