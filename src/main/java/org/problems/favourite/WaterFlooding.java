@@ -37,7 +37,7 @@ public class WaterFlooding {
 		}
 		int n = grid[0].length;
 
-		Queue<int[]> queue = new LinkedList<>(); // BFS: starting with all of the rotten oranges
+		Queue<int[]> queue = new LinkedList<>();
 
 		for (int r = 0; r < m; r++) {
 			for (int c = 0; c < n; c++) {
