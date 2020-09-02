@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Find Pair With Given Sum
+ * Find Interval With Given Sum
  * 
  * Given a list of positive integers nums and an int target, return indices of
  * the two numbers such that they add up to a target - 30.

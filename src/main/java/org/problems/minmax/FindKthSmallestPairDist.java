@@ -21,8 +21,8 @@ import java.util.Arrays;
  * 0 <= nums[i] < 1000000. 
  * 1 <= k <= len(nums) * (len(nums) - 1) / 2.
  * 
- * Runtime: 5 ms, faster than 63.32% of Java online submissions for Find K-th Smallest Pair Distance.
- * Memory Usage: 39.8 MB, less than 68.90% of Java online submissions for Find K-th Smallest Pair Distance.
+ * Runtime: 5 ms, faster than 63.32% of Java online submissions for Find K-th Smallest Interval Distance.
+ * Memory Usage: 39.8 MB, less than 68.90% of Java online submissions for Find K-th Smallest Interval Distance.
  */
 public class FindKthSmallestPairDist {
 
