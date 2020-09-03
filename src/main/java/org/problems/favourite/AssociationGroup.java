@@ -1,6 +1,7 @@
 package org.problems.favourite;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -31,6 +32,11 @@ public class AssociationGroup {
 	        parent = this;
 	        relations.add(this); // loop relation
 	    }
+
+		@Override
+		public String toString() {
+			return "Node [id=" + id + ", name=" + name + "]";
+		}
 	}
 
 	
@@ -122,8 +128,9 @@ public class AssociationGroup {
 	            g.union(link[0], link[1]);
 	      }
 	        
-	      return g.largest.stream().map(node -> node.name).collect(Collectors.toList());
-
+	      List<String> res = g.largest.stream().map(node -> node.name).collect(Collectors.toList());
+	      Collections.sort(res);
+	      return res;
 	}
 	
 
@@ -156,18 +163,16 @@ public class AssociationGroup {
 		};
 		System.out.println(largestItemAssociation(5, itemAssociations2, names2));// item1 item5 item6
 
-		String[] names3 = {"a","b","c","d","e","f", "w","x","y","z"};// testing lexicographicity
+		String[] names3 = {"l1","l2","l10","l11", "l5","l6","l7","l8"};// testing lexicographicity
 		int[][] itemAssociations3 = {
 				{0, 1},
 				{1, 0},
 				{0, 2},
-				{3, 4},
+				{2, 3},
+
 				{4, 5},
-				{5, 4},
-				{1, 4},
-				{6, 7},
-				{7, 8},
-				{8, 9}
+				{5, 6},
+				{6, 7}
 		};
 		System.out.println(largestItemAssociation(5, itemAssociations3, names3));// a b c d e f
 
