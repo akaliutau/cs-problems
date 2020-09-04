@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
  * 
  * 
  */
-public class AssociationGroup {
+public class UnionFind {
 	
 	static class Node {
 	    public int id;
