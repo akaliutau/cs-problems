@@ -30,19 +30,21 @@ public class TopKFrequentKeywords {
 
 	public static List<String> getFrequent(int k, String[] keywords, String[] revs) {
 		Map<String, Word> stat = new HashMap<>();
-		Set<String> keywordsList = new HashSet<>(Arrays.asList(keywords));
+		Set<String> keywordsList = new HashSet<>(Arrays.asList(keywords).stream().map(s -> s.trim().toLowerCase()).collect(Collectors.toList()));
 		for (String line : revs) {
-			for (String s : line.split("\\s+")) {
-				if (keywordsList.contains(s)) {
+		    Set<String> processed = new HashSet<>();
+			for (String s : line.toLowerCase().split("\\s+")) {
+				if (!processed.contains(s) && keywordsList.contains(s)) {
 					if (!stat.containsKey(s)) {
 						stat.put(s, new Word(s, 0));
 					}
 					stat.get(s).freq++;
+					processed.add(s);
 				}
 			}
 		}
 
-		Comparator<Word> byFreq = (o,p) -> Integer.compare(p.freq, o.freq);
+		Comparator<Word> byFreq = (o,p) -> Integer.compare(o.freq, p.freq);
 		Comparator<Word> byName = (o,p) -> o.word.compareTo(p.word);
 		List<Word> all = new ArrayList<>(stat.values());
 		Collections.sort(all, byFreq.thenComparing(byName));
