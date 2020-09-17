@@ -17,7 +17,7 @@ Total 600+ problems have been solved
 
 The links to my page are:
 
-[Leetcode - https://leetcode.com/akalu/] (https://leetcode.com/akalu/)
+Leetcode - https://leetcode.com/akalu/
 
-[Hackerrank - https://www.hackerrank.com/alex951413] (https://www.hackerrank.com/alex951413)
+Hackerrank - https://www.hackerrank.com/alex951413
 
