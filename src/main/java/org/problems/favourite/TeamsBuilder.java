@@ -54,10 +54,40 @@ package org.problems.favourite;
  * {4, 6, 10}, {4,5,10}, {5, 6, 10}, and {4, 5, 6, 10}. So the output is 5.
  * 
  */
-public class sol108 {
+public class TeamsBuilder {
+	
+	// n!/m!(n-m)! = n * (n - 1) * ... (n - m + 1) / m!
+	static long comp(int n, int m) {
+		long res = n;
+		for (long l = n - 1; l > n - m && l > 0 ; l --) {
+			res *= l;
+		}
+		long div = m;
+		for (long l = m - 1; l > 0 ; l --) {
+			div *= l;
+		}
+		return res / div;
+	}
+	
+	static int findNumberOfTteams(int num, int[] skills, int minAssociates, int minLevel, int maxLevel) {
+		int size = 0;
+		for (int i = 0; i < num; i++) {
+			if (skills[i] >= minLevel && skills[i] <= maxLevel) {
+				size ++;
+			}
+		}
+		if (size < minAssociates) {// not enough people
+			return 0;
+		}
+		long ans = 0;
+		for (int i = minAssociates; i <= size; i++) {
+			ans += comp(size, i);
+		}
+		return (int) ans;
+	}
 
 	public static void main(String[] arg) {
-		System.out.println(true);
+		System.out.println(findNumberOfTteams(6, new int[] {12, 4, 6, 13, 5, 10}, 3,  4, 10));
 	}
 
 }

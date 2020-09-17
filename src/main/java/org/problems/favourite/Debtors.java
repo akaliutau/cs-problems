@@ -1,5 +1,13 @@
 package org.problems.favourite;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 /**
  * Debtors
  * 
@@ -26,8 +34,10 @@ package org.problems.favourite;
  * negative balance then return a list containing the string "Nobody has a
  * negative balance".
  * 
- * Constraints: 1 ≤ numRows ≤ 2*10^5 1 ≤ amount in debts ≤ 1000 1 ≤ length of
- * borrower and lender in debts ≤ 20
+ * Constraints: 
+ * 1 ≤ numRows ≤ 2*10^5 
+ * 1 ≤ amount in debts ≤ 1000 
+ * 1 ≤ length of borrower and lender in debts ≤ 20
  * 
  * Example: 
  * 
@@ -51,10 +61,71 @@ package org.problems.favourite;
  * amoung all members.
  * 
  */
-public class sol105 {
+public class Debtors {
+	
+	static class Debtor {
+		String borrower;
+		String lender;
+		int amount;
+		
+		public Debtor(String borrower, String lender, int amount) {
+			this.borrower = borrower;
+			this.lender = lender;
+			this.amount = amount;
+		}
+	}
+	
+	static class Balance {
+		String name;
+		int balance;
+
+		public Balance(String name) {
+			this.name = name;
+		}
+
+	}
+	
+	static List<String> getNames(final List<Balance> lst, final int min){
+		return lst.stream().filter(b -> b.balance == min).map(b -> b.name).collect(Collectors.toList());
+	}
+	
+	public static List<String> debtors(List<Debtor> records){
+		Map<String, Balance> map = new HashMap<>();
+		for (Debtor rec : records) {
+			if (!map.containsKey(rec.borrower)) {
+				map.put(rec.borrower, new Balance(rec.borrower));
+			}
+			if (!map.containsKey(rec.lender)) {
+				map.put(rec.lender, new Balance(rec.lender));
+			}
+			map.get(rec.borrower).balance -= rec.amount;
+			map.get(rec.lender).balance += rec.amount;
+		}
+		List<Balance> lst = new ArrayList<>(map.values());
+		int min = 0;
+		for (Balance b : lst) {
+			min = Math.min(min, b.balance);
+		}
+
+		if (min == 0) {
+			return Arrays.asList("Nobody has a negative balance");
+		}
+		List<String> res = getNames(lst, min);
+		Collections.sort(res);
+		return res;
+	}
 
 	public static void main(String[] arg) {
-		System.out.println(true);
+		
+		List<Debtor> records = new ArrayList<>();
+		records.add(new Debtor("Alice", "Beth",	2));
+		records.add(new Debtor("Beth","Alice", 2));
+		records.add(new Debtor("Casey","Alice", 5));
+		records.add(new Debtor("Beth","Casey", 7)); 
+		records.add(new Debtor("Alice","Beth", 4)); 
+		records.add(new Debtor("Alice","Casey",4)); 
+		
+		System.out.println(debtors(records));
 	}
 
 }
