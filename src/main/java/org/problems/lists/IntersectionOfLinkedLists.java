@@ -51,7 +51,7 @@ public class IntersectionOfLinkedLists {
 
 		int[] lst1 = {4,1};
 		int[] lst2 = {5,0,1};
-		int[] common = {8,4,5};
+
 		ListNode headA = Utils.loadList(lst1);
 		ListNode headB = Utils.loadList(lst2);
 		

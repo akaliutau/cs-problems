@@ -66,7 +66,7 @@ public class MergeTwoSortedLists {
 		m1.next = m2;
 		m2.next = m3;
 		
-		ListNode res = mergeTwoLists(n1,m1);
+		mergeTwoLists(n1,m1);
 		
 	}
 
