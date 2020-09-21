@@ -1,7 +1,6 @@
 package org.problems.favourite;
 
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * Min Cost To Add Paths

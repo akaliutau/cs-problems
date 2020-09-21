@@ -28,22 +28,23 @@ import java.util.List;
 public class LabelsPartition {
 
 	public static List<Integer> partitionLabels(String s) {
-		int[] letters = new int[26];
+		int[] letterLastSeenAt = new int[26];
 		int n = s.length();
 		for (int i = 0; i < n; i++) {
-			letters[s.charAt(i) - 'a'] = i;
+		    letterLastSeenAt[s.charAt(i) - 'a'] = i;
 		}
 
-		int pivot = 0;
-		int prev = 0;
+		int end = 0;
+		int start = 0;
 		List<Integer> result = new LinkedList<>();
 		for (int i = 0; i < n; i++) {
-			if (letters[s.charAt(i) - 'a'] > pivot) {
-				pivot = letters[s.charAt(i) - 'a'];
+		    char cur = s.charAt(i);
+			if (letterLastSeenAt[cur - 'a'] > end) {
+			    end = letterLastSeenAt[cur - 'a'];// max{All ends for letters met so far}
 			}
-			if (i == pivot) {
-				result.add(i - prev + 1);
-				prev = i + 1;
+			if (i == end) {// move until cur letter is the last one from group/block
+				result.add(i - start + 1);
+				start = i + 1;
 			}
 		}
 
