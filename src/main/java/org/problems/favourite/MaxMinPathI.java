@@ -41,7 +41,7 @@ public class MaxMinPathI {
 		if (n > 0) {
 			m = data[0].length;
 		}
-		int[][] dp = new int[n][m];
+		int[][] dp = new int[n][m];// max(min value met on this path so far)
 		for (int i = 0; i < n; i++) {
 			Arrays.fill(dp[i], Integer.MIN_VALUE);
 		}
@@ -55,13 +55,13 @@ public class MaxMinPathI {
 			int y = cur[1];
 			int max = dp[x][y];
 			if (x + 1 < n) {
-				int minD = Math.min(max, data[x + 1][y]);
+				int minD = Math.min(max, data[x + 1][y]);// calc min value on path NOTE: dp is not used here!
 
 				q.add(new int[] {x + 1, y});
-				dp[x + 1][y] = Math.max(dp[x + 1][y], minD);
+				dp[x + 1][y] = Math.max(dp[x + 1][y], minD);// choose the best one using dp
 			}
 			if (y + 1 < m) {
-				int minR = Math.min(max, data[x][y + 1]);
+				int minR = Math.min(max, data[x][y + 1]);// calc min value on path
 
 				q.add(new int[] {x, y + 1});
 				dp[x][y + 1] = Math.max(dp[x][y + 1], minR);

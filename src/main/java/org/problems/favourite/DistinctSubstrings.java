@@ -19,21 +19,28 @@ public class DistinctSubstrings {
         
         int left = 0;
         for (int right = 0; right < n; right++){
-        	left = Math.max(index[chars[right] - 'a'], left);
+            char cur = chars[right];
+            // index['a'] contains the most left position when 'a' has been seen
+        	left = Math.max(index[cur - 'a'], left);
             String substr = s.substring(left, right + 1);
             if (right - left + 1 == k && !res.contains(substr)) {
                 res.add(substr);
                 left ++;
             }
-            index[chars[right] - 'a'] = right + 1;
+            index[cur - 'a'] = right + 1;
         }
         
         return new ArrayList<>(res);
     }
 
 	public static void main(String[] arg) {
-
+	    //     a b c a b c
+	    
+	    //     |     |
+	    //
 		System.out.println(countAllDistinctSubstrings("abcabc", 3));
+		
+		
 		System.out.println(countAllDistinctSubstrings("abacab", 3));
 		System.out.println(countAllDistinctSubstrings("awaglknagawunagwkwagl", 4));
 
